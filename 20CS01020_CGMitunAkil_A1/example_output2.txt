@@ -1,0 +1,239 @@
+$./a.exe
+regex: a?b?(c*)
+postfix: ab?c*?
+NFA with epsilon--------------------------
+no of states: 6
+start state: 0
+end state: 7
+state id: 0
+        a ->2
+state id: 2
+        b ->6
+state id: 6
+        E ->4
+        E ->7
+state id: 4
+        c ->5
+state id: 5
+        E ->4
+        E ->7
+state id: 7
+Closure---------------------------------  
+0:> { 0 }
+2:> { 2 }
+4:> { 4 }
+5:> { 4 5 7 }
+6:> { 4 6 7 }
+7:> { 7 }
+NFA without epsilon-----------------------
+no of states: 6
+start states:
+0
+end states:
+7 6 5
+state id: 0
+        a ->2
+state id: 2
+        b ->6
+state id: 6
+        c ->5
+state id: 5
+        c ->5
+no of used states: 4
+DFA------------------------------------
+start state: { 0 }
+end states:
+{
+  { 4 5 7 }
+  { 4 6 7 }
+}
+no of states: 4
+{ 0 }
+   a : { 2 }
+   b :  @
+   c :  @
+{ 2 }
+   a :  @
+   b : { 4 6 7 }
+   c :  @
+{ 4 5 7 }
+   a :  @
+   b :  @
+   c : { 4 5 7 }
+{ 4 6 7 }
+PS C:\Users\cgmit\OneDrive\Documents\Semester7\CDLab\putin> ./a.exe
+regex: a?b?(c*)
+postfix: ab?c*?
+NFA with epsilon--------------------------
+no of states: 6
+start state: 0
+end state: 7
+state id: 0
+        a ->2
+state id: 2
+        b ->6
+state id: 6
+        E ->4
+        E ->7
+state id: 4
+        c ->5
+state id: 5
+        E ->4
+        E ->7
+state id: 7
+Closure---------------------------------  
+0:> { 0 }
+2:> { 2 }
+4:> { 4 }
+5:> { 4 5 7 }
+6:> { 4 6 7 }
+7:> { 7 }
+NFA without epsilon-----------------------
+no of states: 6
+start states:
+0
+end states:
+7 6 5
+state id: 0
+        a ->2
+state id: 2
+        b ->6
+state id: 6
+        c ->5
+state id: 5
+        c ->5
+no of used states: 4
+DFA------------------------------------
+start state: { 0 }
+end states:
+{
+  { 4 5 7 }
+  { 4 6 7 }
+}
+no of states: 4
+{ 0 }
+   a : { 2 }
+   b :  @
+   c :  @
+{ 2 }
+   a :  @
+   b : { 4 6 7 }
+   c :  @
+{ 4 5 7 }
+   a :  @
+   b :  @
+   c : { 4 5 7 }
+{ 4 6 7 }
+   a :  @
+   b :  @
+   c : { 4 5 7 }
+Minimised_DFA----------------------------
+start state: { 0 }
+end states:
+{
+  { 4 6 7 }
+}
+no of states: 3
+{ 0 }
+   a : { 2 }
+   b :  @
+   c :  @
+{ 2 }
+   a :  @ 
+   b : { 4 6 7 }
+   c :  @
+{ 4 6 7 }
+   a :  @
+   b :  @
+   c : { 4 6 7 }
+Simulation-------------------------------
+Enter string to test against DFA: ab 
+{ 0 }
+|-> a ->|
+{ 2 }
+|-> b ->|
+{ 4 6 7 }
+Valid string
+Simulate more (1/0)?: 1
+Enter string to test against DFA: abc
+{ 0 }
+|-> a ->|
+{ 2 }
+|-> b ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+Valid string
+Simulate more (1/0)?: 1
+Enter string to test against DFA: abcccccccccccccccccccccccccccccccc
+{ 0 }
+|-> a ->|
+{ 2 }
+|-> b ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+|-> c ->|
+{ 4 6 7 }
+Valid string
+Simulate more (1/0)?: 0

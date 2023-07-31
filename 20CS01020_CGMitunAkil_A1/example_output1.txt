@@ -1,0 +1,128 @@
+$./a.exe
+regex: a?(a+b)*?b
+postfix: aab+*?b?
+NFA with epsilon--------------------------
+no of states: 10
+start state: 0
+end state: 11
+state id: 0
+        a ->8
+state id: 8
+        E ->6
+        E ->10
+state id: 6
+        E ->2
+        E ->4
+state id: 2
+        a ->3
+state id: 3
+        E ->7
+state id: 7
+        E ->6
+        E ->10
+state id: 10
+        b ->11
+state id: 11
+state id: 4
+        b ->5
+state id: 5
+        E ->7
+Closure---------------------------------
+0:> { 0 }
+2:> { 2 }
+3:> { 2 3 4 6 7 10 }
+4:> { 4 }
+5:> { 2 4 5 6 7 10 }
+6:> { 2 4 6 }
+7:> { 2 4 6 7 10 }
+8:> { 2 4 6 8 10 }
+10:> { 10 }
+11:> { 11 }
+NFA without epsilon-----------------------
+no of states: 10
+start states:
+0
+end states:
+11
+state id: 0
+        a ->8
+state id: 8
+        b ->11
+        a ->3
+        b ->5
+state id: 11
+state id: 3
+        a ->3
+        b ->5
+        b ->11
+state id: 5
+        a ->3
+        b ->5
+        b ->11
+no of used states: 5
+DFA------------------------------------
+start state: { 0 }
+end states:
+{
+  { 2 4 5 6 7 10 11 }
+}
+no of states: 4
+{ 0 }
+   a : { 2 4 6 8 10 }
+   b :  @
+{ 2 3 4 6 7 10 }
+   a : { 2 3 4 6 7 10 }
+   b : { 2 4 5 6 7 10 11 }
+{ 2 4 5 6 7 10 11 }
+   a : { 2 3 4 6 7 10 }
+   b : { 2 4 5 6 7 10 11 }
+{ 2 4 6 8 10 }
+   a : { 2 3 4 6 7 10 }
+   b : { 2 4 5 6 7 10 11 }
+Minimised_DFA----------------------------
+start state: { 0 }
+end states:
+{
+  { 2 4 5 6 7 10 11 }
+}
+no of states: 3
+{ 0 }
+   a : { 2 4 6 8 10 }
+   b :  @
+{ 2 4 5 6 7 10 11 }
+   a : { 2 4 6 8 10 }
+   b : { 2 4 5 6 7 10 11 }
+{ 2 4 6 8 10 }
+   a : { 2 4 6 8 10 }
+   b : { 2 4 5 6 7 10 11 }
+Simulation-------------------------------
+Enter string to test against DFA: aba
+{ 0 }
+|-> a ->|
+{ 2 4 6 8 10 }
+|-> b ->|
+{ 2 4 5 6 7 10 11 }
+|-> a ->|
+{ 2 4 6 8 10 }
+Partially valid does not end at a valid state
+Simulate more (1/0)?: 1
+Enter string to test against DFA: abb
+{ 0 }
+|-> a ->|
+{ 2 4 6 8 10 }
+|-> b ->|
+{ 2 4 5 6 7 10 11 }
+|-> b ->|
+{ 2 4 5 6 7 10 11 }
+Valid string
+Simulate more (1/0)?: 1
+Enter string to test against DFA: aab
+{ 0 }
+|-> a ->|
+{ 2 4 6 8 10 }
+|-> a ->|
+{ 2 4 6 8 10 }
+|-> b ->|
+{ 2 4 5 6 7 10 11 }
+Valid string
+Simulate more (1/0)?: 0
