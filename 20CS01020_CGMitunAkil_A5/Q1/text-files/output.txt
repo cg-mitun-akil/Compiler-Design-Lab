@@ -1,0 +1,16 @@
+output S -> n B 
+Match n
+output B -> n B A B 
+Match n
+output B -> n B A B 
+Match n
+output B -> # 
+output A -> * 
+Match *
+output B -> # 
+output A -> + 
+Match +
+output B -> #
+
+
+ACCEPTED
