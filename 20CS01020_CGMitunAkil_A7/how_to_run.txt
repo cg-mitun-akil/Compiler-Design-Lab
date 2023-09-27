@@ -1,0 +1,16 @@
+Run the following commands in the given order:
+
+1. bison -d parse.y   
+2. flex parse.l 
+3. gcc parse.tab.c
+4. ./a.exe  
+
+After that program will ask for the location of file.
+There are three inputs for this. You can choose any one of this.
+
+1. ./examples/input_1.txt 
+2. ./examples/input_2.txt 
+3. ./examples/input_3.txt 
+
+
+
