@@ -1,5 +1,4 @@
 %{ 
-/* Definition section */
 	#include "calc.tab.h"
 	extern int yylval; 
 %}
@@ -17,7 +16,7 @@ parantheses [()]
 {operators}   { return yytext[0]; } 
 {parantheses} { return yytext[0]; } 
 [\t\n ]       { return 0; }
- z
+.              {return -1; }
 %% 
 int yywrap() 
 { 

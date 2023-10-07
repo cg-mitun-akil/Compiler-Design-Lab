@@ -1,28 +1,22 @@
 %{ 
-   /* Definition section */
   #include <stdio.h>
   #include "lex.yy.c"
   int flag=0;
   void yyerror();
 %} 
 
-%union {
-   float val;
-}
+%token NUMBER 
 
-%type<val> G E T F
-%token<val> NUMBER 
-
-/* Precedence section */
 %left '+' '-'
 %left '*' '/'
+%left '%'
+%left '(' ')'
 
 %start G
 
-/* Rule Section */
 %%
 G: E  { $$ = $1;
-        printf("\nResult=%f\n", $$); 
+        printf("\nResult = %d\n", $$); 
         return 0; 
       };
 
@@ -42,18 +36,15 @@ T:  T'*'F {$$ = $1 * $3;}
           }
 |   F     {$$ = $1;}; 
 
-F: NUMBER {$$ = $1;};
+F: NUMBER {$$ = $1;} 
+| '('E')' {$$ = $2;};
 %%
 
 
-//driver code 
 void main() 
 { 
-   printf("Enter any arithmetic expression of whole numbers with +,-,* and / only\n");  
+   printf("Enter any arithmetic expression of whole numbers with +,-,* and / only WITHOUT SPACES\n");  
    yyparse();
-   if(flag==0) {
-        printf("Entered arithmetic expression is valid\n"); 
-   }
 } 
   
 void yyerror() 

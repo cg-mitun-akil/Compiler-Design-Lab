@@ -1,13 +1,12 @@
 %{ 
-/* Definition section */
 	#include "calc.tab.h"
 %}
 
 
 digit 		[0-9]
-number      ({digit}+)(\.{digit}+)?
-operators 	(\+|\*|\-|\/)
-/* Rule Section */
+number      (-?{digit}+)(\.{digit}+)?
+operators 	(\+|\*|\-|\/|\%)
+
 %% 
 {number} 	{ 
 				yylval.val=atof(yytext); 
