@@ -1,0 +1,91 @@
+
+;; Function func (func, funcdef_no=119, decl_uid=3493, cgraph_uid=120, symbol_order=119)
+
+pointer_query counters:
+  index cache size:   0
+  index entries:      0
+  access cache size:  0
+  access entries:     0
+  hits:               0
+  misses:             6
+  failures:           0
+  max_depth:          1
+int func (int n)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _11;
+  int _12;
+  int _13;
+
+  <bb 2> :
+  if (n_7(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _13 = 1;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 7>; [INV]
+
+  <bb 4> :
+  if (n_7(D) == 2)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 5> :
+  _12 = 2;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 7>; [INV]
+
+  <bb 6> :
+  _1 = n_7(D) + -1;
+  _2 = func (_1);
+  _3 = n_7(D) + -2;
+  _4 = func (_3);
+  _11 = _2 + _4;
+  // predicted unlikely by early return (on trees) predictor.
+
+  <bb 7> :
+  # _5 = PHI <_13(3), _12(5), _11(6)>
+  return _5;
+
+}
+
+
+
+;; Function main (main, funcdef_no=120, decl_uid=3495, cgraph_uid=121, symbol_order=120)
+
+pointer_query counters:
+  index cache size:   0
+  index entries:      0
+  access cache size:  0
+  access entries:     0
+  hits:               0
+  misses:             8
+  failures:           0
+  max_depth:          1
+int main ()
+{
+  int a;
+  int _11;
+
+  <bb 2> :
+  a_1 = 3;
+  a_2 = 17;
+  a_3 = 67;
+  a_6 = func (a_3);
+  a_8 = func (5);
+  a_9 = 3;
+  printf ("%d", a_9);
+  _11 = 0;
+  return _11;
+
+}
+
+

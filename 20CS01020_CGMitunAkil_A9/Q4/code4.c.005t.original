@@ -1,0 +1,1630 @@
+
+;; Function __debugbreak (null)
+;; enabled by -tree-original
+
+
+{
+  __asm__ __volatile__("int {$}3"::);
+}
+
+
+;; Function __fastfail (null)
+;; enabled by -tree-original
+
+
+{
+  __asm__ __volatile__("int {$}0x29"::"c" code);
+}
+
+
+;; Function fseeko (null)
+;; enabled by -tree-original
+
+
+{
+  return fseek (_File, _Offset, _Origin);
+}
+
+
+;; Function fseeko64 (null)
+;; enabled by -tree-original
+
+
+{
+  return _fseeki64 (_File, _Offset, _Origin);
+}
+
+
+;; Function ftello (null)
+;; enabled by -tree-original
+
+
+{
+  return (_off_t) ftell (_File);
+}
+
+
+;; Function ftello64 (null)
+;; enabled by -tree-original
+
+
+{
+  return (_off64_t) _ftelli64 (_File);
+}
+
+
+;; Function _scprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const char *) _Format);
+  __ret = __stdio_common_vsprintf (2, 0B, 0, (const char *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function _snscanf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const char *) _Format);
+  __ret = __stdio_common_vsscanf (0, (const char *) _Src, _MaxCount, (const char *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function _snprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const char *) _Format);
+  __ret = _vsnprintf ((char *) _Dest, _Count, (const char *) _Format, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function fwscanf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vfwscanf (2, (struct FILE *) _File, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function swscanf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vswscanf (2, (const wchar_t *) _Src, 18446744073709551615, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function wscanf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vfwscanf (2, __acrt_iob_func (0), (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function vfwscanf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwscanf (2, __stream, __format, 0B, __local_argv);
+}
+
+
+;; Function vswscanf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vswscanf (2, (const wchar_t *) __source, 18446744073709551615, (const wchar_t *) __format, 0B, __local_argv);
+}
+
+
+;; Function vwscanf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwscanf (2, __acrt_iob_func (0), __format, 0B, __local_argv);
+}
+
+
+;; Function fwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vfwprintf (4, (struct FILE *) _File, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function wprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vfwprintf (4, __acrt_iob_func (1), (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function vfwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwprintf (4, (struct FILE *) _File, (const wchar_t *) _Format, 0B, _ArgList);
+}
+
+
+;; Function vwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwprintf (4, __acrt_iob_func (1), (const wchar_t *) _Format, 0B, _ArgList);
+}
+
+
+;; Function _scwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vswprintf (6, 0B, 0, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function _snwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vswprintf (5, (wchar_t *) _Dest, _Count, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function snwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) format);
+  __ret = __stdio_common_vswprintf (6, (wchar_t *) s, n, (const wchar_t *) format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function vsnwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  int __ret = __stdio_common_vswprintf (4, (wchar_t *) s, n, (const wchar_t *) format, 0B, arg);
+
+    int __ret = __stdio_common_vswprintf (4, (wchar_t *) s, n, (const wchar_t *) format, 0B, arg);
+  return MAX_EXPR <__ret, -1>;
+}
+
+
+;; Function _swprintf (null)
+;; enabled by -tree-original
+
+
+{
+  char * __ap;
+  int __ret;
+
+    char * __ap;
+    int __ret;
+  __builtin_va_start ((char * &) &__ap, (const wchar_t *) _Format);
+  __ret = __stdio_common_vswprintf (4, (wchar_t *) _Dest, 18446744073709551615, (const wchar_t *) _Format, 0B, __ap);
+  __builtin_va_end ((char * &) &__ap);
+  return __ret;
+}
+
+
+;; Function _vswprintf (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vswprintf (4, (wchar_t *) _Dest, 18446744073709551615, (const wchar_t *) _Format, 0B, _Args);
+}
+
+
+;; Function _vscwprintf (null)
+;; enabled by -tree-original
+
+
+{
+  int _Result = __stdio_common_vswprintf (2, 0B, 0, (const wchar_t *) _Format, 0B, _ArgList);
+
+    int _Result = __stdio_common_vswprintf (2, 0B, 0, (const wchar_t *) _Format, 0B, _ArgList);
+  return MAX_EXPR <_Result, -1>;
+}
+
+
+;; Function vswprintf (null)
+;; enabled by -tree-original
+
+
+{
+  return vsnwprintf (__stream, __count, __format, __local_argv);
+}
+
+
+;; Function swprintf (null)
+;; enabled by -tree-original
+
+
+{
+  int __retval;
+  char * __local_argv;
+
+    int __retval;
+    char * __local_argv;
+  __builtin_va_start ((char * &) &__local_argv, __format);
+  __retval = vswprintf (__stream, __count, __format, __local_argv);
+  __builtin_va_end ((char * &) &__local_argv);
+  return __retval;
+}
+
+
+;; Function _vfscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfscanf (1, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _fscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfscanf_s_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function fscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfscanf_s_l (_File, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _scanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfscanf_s_l (__acrt_iob_func (0), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function scanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfscanf_s_l (__acrt_iob_func (0), _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfscanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfscanf (0, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _fscanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfscanf_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _scanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfscanf_l (__acrt_iob_func (0), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsscanf (1, _Src, 18446744073709551615, _Format, _Locale, _ArgList);
+}
+
+
+;; Function vsscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsscanf_s_l (_Src, _Format, 0B, _ArgList);
+}
+
+
+;; Function _sscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsscanf_s_l (_Src, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function sscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsscanf_s_l (_Src, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsscanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsscanf (0, _Src, 18446744073709551615, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _sscanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsscanf_l (_Src, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = __stdio_common_vsscanf (1, _Src, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = __stdio_common_vsscanf (1, _Src, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snscanf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = __stdio_common_vsscanf (0, _Src, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfprintf_s (0, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function vfprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_s_l (_File, _Format, 0B, _ArgList);
+}
+
+
+;; Function _vprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_s_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+}
+
+
+;; Function vprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_s_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+}
+
+
+;; Function _fprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfprintf_s_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _printf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfprintf_s_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function fprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfprintf_s_l (_File, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function printf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfprintf_s_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsnprintf_c_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf (0, _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vsnprintf_c (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsnprintf_c_l (_DstBuf, _MaxCount, _Format, 0B, _ArgList);
+}
+
+
+;; Function _snprintf_c_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsnprintf_c_l (_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snprintf_c (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsnprintf_c_l (_DstBuf, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsnprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsnprintf_s (0, _DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function vsnprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsnprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, 0B, _ArgList);
+}
+
+
+;; Function _vsnprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsnprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, 0B, _ArgList);
+}
+
+
+;; Function _snprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsnprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsnprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf_s (0, _DstBuf, _DstSize, _Format, _Locale, _ArgList);
+}
+
+
+;; Function vsprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsprintf_s_l (_DstBuf, _Size, _Format, 0B, _ArgList);
+}
+
+
+;; Function _sprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsprintf_s_l (_DstBuf, _DstSize, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function sprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsprintf_s_l (_DstBuf, _DstSize, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfprintf_p (0, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vfprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_p_l (_File, _Format, 0B, _ArgList);
+}
+
+
+;; Function _vprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_p_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_p_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+}
+
+
+;; Function _fprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = __stdio_common_vfprintf_p (0, _File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _fprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfprintf_p_l (_File, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _printf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfprintf_p_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _printf_p (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfprintf_p_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf_p (0, _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vsprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsprintf_p_l (_Dst, _MaxCount, _Format, 0B, _ArgList);
+}
+
+
+;; Function _sprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsprintf_p_l (_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _sprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsprintf_p_l (_Dst, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vscprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf_p (2, 0B, 0, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vscprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  return _vscprintf_p_l (_Format, 0B, _ArgList);
+}
+
+
+;; Function _scprintf_p_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vscprintf_p_l (_Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _scprintf_p (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vscprintf_p_l (_Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfprintf (0, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfprintf_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+}
+
+
+;; Function _fprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfprintf_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _printf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfprintf_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsnprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf (1, _DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _snprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsnprintf_l (_DstBuf, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsnprintf_l (_DstBuf, 18446744073709551615, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _sprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsprintf_l (_DstBuf, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vscprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsprintf (2, 0B, 0, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _scprintf_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vscprintf_l (_Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfwscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwscanf (3, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _fwscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfwscanf_s_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function fwscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfwscanf_s_l (_File, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _wscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfwscanf_s_l (__acrt_iob_func (0), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function wscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfwscanf_s_l (__acrt_iob_func (0), _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vswscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vswscanf (3, _Src, 18446744073709551615, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _swscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vswscanf_s_l (_Src, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function swscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vswscanf_s_l (_Src, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsnwscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vswscanf (3, _Src, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _snwscanf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsnwscanf_s_l (_Src, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snwscanf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsnwscanf_s_l (_Src, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vfwprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vfwprintf_s (4, _File, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vwprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfwprintf_s_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+}
+
+
+;; Function vfwprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfwprintf_s_l (_File, _Format, 0B, _ArgList);
+}
+
+
+;; Function vwprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vfwprintf_s_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+}
+
+
+;; Function _fwprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfwprintf_s_l (_File, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _wprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vfwprintf_s_l (__acrt_iob_func (1), _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function fwprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfwprintf_s_l (_File, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function wprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vfwprintf_s_l (__acrt_iob_func (1), _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vswprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vswprintf_s (4, _DstBuf, _DstSize, _Format, _Locale, _ArgList);
+}
+
+
+;; Function vswprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vswprintf_s_l (_DstBuf, _DstSize, _Format, 0B, _ArgList);
+}
+
+
+;; Function _swprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vswprintf_s_l (_DstBuf, _DstSize, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function swprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vswprintf_s_l (_DstBuf, _DstSize, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _vsnwprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  return __stdio_common_vsnwprintf_s (4, _DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+}
+
+
+;; Function _vsnwprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  return _vsnwprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, 0B, _ArgList);
+}
+
+
+;; Function _snwprintf_s_l (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Locale);
+  _Ret = _vsnwprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, _Locale, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function _snwprintf_s (null)
+;; enabled by -tree-original
+
+
+{
+  char * _ArgList;
+  int _Ret;
+
+    char * _ArgList;
+    int _Ret;
+  __builtin_va_start ((char * &) &_ArgList, _Format);
+  _Ret = _vsnwprintf_s_l (_DstBuf, _DstSize, _MaxCount, _Format, 0B, _ArgList);
+  __builtin_va_end ((char * &) &_ArgList);
+  return _Ret;
+}
+
+
+;; Function func (null)
+;; enabled by -tree-original
+
+
+{
+  if (n == 1)
+    {
+      return 1;
+    }
+  else
+    {
+      if (n == 2)
+        {
+          return 2;
+        }
+      else
+        {
+          return func (n + -1) + func (n + -2);
+        }
+    }
+}
+
+
+;; Function main (null)
+;; enabled by -tree-original
+
+
+{
+  int a = 3;
+
+    int a = 3;
+  a = 17;
+  a = 67;
+  a = func (a);
+  a = func (5);
+  a = 3;
+  printf ((const char * restrict) "%d", a);
+}
+return 0;
+

@@ -1,0 +1,165 @@
+
+;; Function func (func, funcdef_no=119, decl_uid=3493, cgraph_uid=120, symbol_order=119)
+
+deleting insn with uid = 5.
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+func
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 1 [dx] 2 [cx] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 2 [cx] 3 [bx] 4 [si] 7 [sp] 17 [flags]
+;;  ref usage 	r0={4d,4u} r1={3d} r2={5d,3u} r3={1d,5u} r4={1d,1u} r7={1d,7u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r16={1e} r17={7d,2u} r18={2d} r20={3d} r21={3d} r22={3d} r23={3d} r24={2d} r25={2d} r28={2d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={3d} r37={3d} r38={2d} r39={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} 
+;;    total ref usage 153{130d,22u,1e} in 13{11 regular + 2 call} insns.
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (reg/v:SI 3 bx [orig:87 n ] [87])
+        (reg:SI 2 cx [91])) "code4.c":4:1 81 {*movsi_internal}
+     (expr_list:REG_EQUIV (mem/c:SI (reg/f:DI 16 argp) [1 n+0 S4 A64])
+        (nil)))
+(note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
+(insn 4 3 8 2 (set (reg:SI 0 ax [orig:86 <retval> ] [86])
+        (reg/v:SI 3 bx [orig:87 n ] [87])) "code4.c":6:16 81 {*movsi_internal}
+     (nil))
+(insn 8 4 9 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 3 bx [orig:87 n ] [87])
+            (const_int 1 [0x1]))) "code4.c":5:7 11 {*cmpsi_1}
+     (nil))
+(jump_insn 9 8 10 2 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 27)
+            (pc))) "code4.c":5:7 891 {*jcc}
+     (int_list:REG_BR_PROB 225163668 (nil))
+ -> 27)
+(note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg/v:SI 3 bx [orig:87 n ] [87])
+            (const_int 2 [0x2]))) "code4.c":7:12 11 {*cmpsi_1}
+     (nil))
+(jump_insn 12 11 13 3 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 27)
+            (pc))) "code4.c":7:12 891 {*jcc}
+     (int_list:REG_BR_PROB 386869180 (nil))
+ -> 27)
+(note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 16 4 (parallel [
+            (set (reg:SI 2 cx [88])
+                (plus:SI (reg/v:SI 3 bx [orig:87 n ] [87])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "code4.c":10:16 229 {*addsi_1}
+     (nil))
+(call_insn/u/c 16 14 17 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":10:16 909 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 17 16 18 4 (set (reg:SI 4 si [orig:83 _2 ] [83])
+        (reg:SI 0 ax [92])) "code4.c":10:16 81 {*movsi_internal}
+     (nil))
+(insn 18 17 20 4 (parallel [
+            (set (reg:SI 2 cx [89])
+                (plus:SI (reg/v:SI 3 bx [orig:87 n ] [87])
+                    (const_int -2 [0xfffffffffffffffe])))
+            (clobber (reg:CC 17 flags))
+        ]) "code4.c":10:32 229 {*addsi_1}
+     (nil))
+(call_insn/u/c 20 18 21 4 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":10:32 909 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(note 21 20 22 4 NOTE_INSN_DELETED)
+(insn 22 21 27 4 (parallel [
+            (set (reg:SI 0 ax [orig:86 <retval> ] [86])
+                (plus:SI (reg:SI 0 ax [93])
+                    (reg:SI 4 si [orig:83 _2 ] [83])))
+            (clobber (reg:CC 17 flags))
+        ]) "code4.c":10:30 229 {*addsi_1}
+     (nil))
+(code_label 27 22 30 5 1 (nil) [2 uses])
+(note 30 27 29 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 29 30 42 5 (use (reg/i:SI 0 ax)) "code4.c":11:1 -1
+     (nil))
+(note 42 29 0 NOTE_INSN_DELETED)
+
+;; Function main (main, funcdef_no=120, decl_uid=3495, cgraph_uid=121, symbol_order=120) (executed once)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+main
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [ax] 1 [dx] 2 [cx] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 24 [xmm4] 25 [xmm5] 28 [mm0] 29 [mm1] 30 [mm2] 31 [mm3] 32 [mm4] 33 [mm5] 34 [mm6] 35 [mm7] 36 [r8] 37 [r9] 38 [r10] 39 [r11] 52 [xmm16] 53 [xmm17] 54 [xmm18] 55 [xmm19] 56 [xmm20] 57 [xmm21] 58 [xmm22] 59 [xmm23] 60 [xmm24] 61 [xmm25] 62 [xmm26] 63 [xmm27] 64 [xmm28] 65 [xmm29] 66 [xmm30] 67 [xmm31] 68 [k0] 69 [k1] 70 [k2] 71 [k3] 72 [k4] 73 [k5] 74 [k6] 75 [k7]
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 7 [sp]
+;;  eh block artificial uses 	 7 [sp] 16 [argp]
+;;  entry block defs 	 1 [dx] 2 [cx] 7 [sp] 20 [xmm0] 21 [xmm1] 22 [xmm2] 23 [xmm3] 36 [r8] 37 [r9]
+;;  exit block uses 	 0 [ax] 7 [sp]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 7 [sp]
+;;  ref usage 	r0={5d,2u} r1={6d,1u} r2={8d,3u} r7={1d,6u} r8={4d} r9={4d} r10={4d} r11={4d} r12={4d} r13={4d} r14={4d} r15={4d} r17={4d} r18={4d} r20={5d} r21={5d} r22={5d} r23={5d} r24={4d} r25={4d} r28={4d} r29={4d} r30={4d} r31={4d} r32={4d} r33={4d} r34={4d} r35={4d} r36={5d} r37={5d} r38={4d} r39={4d} r52={4d} r53={4d} r54={4d} r55={4d} r56={4d} r57={4d} r58={4d} r59={4d} r60={4d} r61={4d} r62={4d} r63={4d} r64={4d} r65={4d} r66={4d} r67={4d} r68={4d} r69={4d} r70={4d} r71={4d} r72={4d} r73={4d} r74={4d} r75={4d} 
+;;    total ref usage 246{234d,12u,0e} in 10{6 regular + 4 call} insns.
+(note 1 0 4 NOTE_INSN_DELETED)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
+(call_insn 3 2 6 2 (call (mem:QI (symbol_ref:DI ("__main") [flags 0x43]  <function_decl 0000000002c8e600 __main>) [0  S1 A8])
+        (const_int 32 [0x20])) "code4.c":14:1 898 {*call}
+     (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
+        (nil))
+    (nil))
+(insn 6 3 7 2 (set (reg:SI 2 cx)
+        (const_int 67 [0x43])) "code4.c":18:9 81 {*movsi_internal}
+     (nil))
+(call_insn/u/c 7 6 8 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":18:9 909 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 8 7 9 2 (set (reg:SI 2 cx)
+        (const_int 5 [0x5])) "code4.c":19:9 81 {*movsi_internal}
+     (nil))
+(call_insn/u/c 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":19:9 909 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
+(insn 10 9 11 2 (set (reg:SI 1 dx)
+        (const_int 3 [0x3])) "code4.c":21:5 81 {*movsi_internal}
+     (nil))
+(insn 11 10 13 2 (set (reg/f:DI 2 cx [83])
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c5aea0 *.LC0>)) "code4.c":21:5 80 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c5aea0 *.LC0>)
+        (nil)))
+(call_insn 13 11 18 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x43]  <function_decl 0000000002a57000 printf>) [0 __builtin_printf S1 A8])
+            (const_int 32 [0x20]))) "code4.c":21:5 909 {*call_value}
+     (nil)
+    (expr_list:DI (use (reg:DI 2 cx))
+        (expr_list:SI (use (reg:SI 1 dx))
+            (nil))))
+(insn 18 13 19 2 (set (reg/i:SI 0 ax)
+        (const_int 0 [0])) "code4.c":22:1 81 {*movsi_internal}
+     (nil))
+(insn 19 18 21 2 (use (reg/i:SI 0 ax)) "code4.c":22:1 -1
+     (nil))
+(note 21 19 0 NOTE_INSN_DELETED)

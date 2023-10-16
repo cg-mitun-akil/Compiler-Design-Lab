@@ -1,0 +1,198 @@
+
+;; Function func (func, funcdef_no=119, decl_uid=3493, cgraph_uid=120, symbol_order=119)
+
+Points-to analysis
+
+Constraints:
+
+ANYTHING = &ANYTHING
+ESCAPED = *ESCAPED
+ESCAPED = ESCAPED + UNKNOWN
+*ESCAPED = NONLOCAL
+NONLOCAL = &NONLOCAL
+NONLOCAL = &ESCAPED
+INTEGER = &ANYTHING
+n = &NONLOCAL
+_1 = n
+_1 = &NONLOCAL
+callescape(11) = &NONLOCAL
+CALLUSED(12) = callescape(11)
+callarg(14) = _1
+callarg(14) = callarg(14) + UNKNOWN
+_2 = &NONLOCAL
+_2 = callarg(14)
+_3 = n
+_3 = &NONLOCAL
+callescape(17) = &NONLOCAL
+CALLUSED(18) = callescape(17)
+callarg(20) = _3
+callarg(20) = callarg(20) + UNKNOWN
+_4 = &NONLOCAL
+_4 = callarg(20)
+_9 = _2
+_9 = _4
+_5 = &NONLOCAL
+_5 = &NONLOCAL
+_5 = _9
+
+Collapsing static cycles and doing variable substitution
+Building predecessor graph
+Detecting pointer and location equivalences
+Rewriting constraints and unifying variables
+Uniting pointer but not location equivalent variables
+Finding indirect cycles
+Solving graph
+
+Points-to sets
+
+ANYTHING = { ANYTHING }
+ESCAPED = { ESCAPED NONLOCAL }
+NONLOCAL = { ESCAPED NONLOCAL }
+STOREDANYTHING = { }
+INTEGER = { ANYTHING }
+n = { NONLOCAL }
+_1 = { NONLOCAL } same as n
+func = { }
+callescape(11) = { NONLOCAL } same as n
+CALLUSED(12) = { NONLOCAL } same as n
+CALLCLOBBERED(13) = { }
+callarg(14) = { NONLOCAL }
+_2 = { NONLOCAL } same as callarg(14)
+_3 = { NONLOCAL } same as n
+callescape(17) = { NONLOCAL } same as n
+CALLUSED(18) = { NONLOCAL } same as n
+CALLCLOBBERED(19) = { }
+callarg(20) = { NONLOCAL }
+_4 = { NONLOCAL } same as callarg(20)
+_9 = { NONLOCAL }
+_5 = { NONLOCAL } same as _9
+
+
+Alias information for func
+
+Aliased symbols
+
+
+Call clobber information
+
+ESCAPED, points-to non-local, points-to vars: { }
+
+Flow-insensitive points-to information
+
+
+int func (int n)
+{
+  int _1;
+  int _2;
+  int _3;
+  int _4;
+  int _5;
+  int _9;
+
+  <bb 2> [local count: 1073741824]:
+  if (n_7(D) == 1)
+    goto <bb 5>; [20.97%]
+  else
+    goto <bb 3>; [79.03%]
+
+  <bb 3> [local count: 848578161]:
+  if (n_7(D) == 2)
+    goto <bb 5>; [36.03%]
+  else
+    goto <bb 4>; [63.97%]
+
+  <bb 4> [local count: 542835452]:
+  _1 = n_7(D) + -1;
+  _2 = func (_1);
+  _3 = n_7(D) + -2;
+  _4 = func (_3);
+  _9 = _2 + _4;
+
+  <bb 5> [local count: 1073741824]:
+  # _5 = PHI <1(2), 2(3), _9(4)>
+  return _5;
+
+}
+
+
+
+;; Function main (main, funcdef_no=120, decl_uid=3495, cgraph_uid=121, symbol_order=120) (executed once)
+
+Points-to analysis
+
+Constraints:
+
+ANYTHING = &ANYTHING
+ESCAPED = *ESCAPED
+ESCAPED = ESCAPED + UNKNOWN
+*ESCAPED = NONLOCAL
+NONLOCAL = &NONLOCAL
+NONLOCAL = &ESCAPED
+INTEGER = &ANYTHING
+callescape(10) = NONLOCAL
+CALLUSED(11) = callescape(10)
+callarg(13) = &STRING
+callarg(13) = callarg(13) + UNKNOWN
+callarg(13) = *callarg(13) + UNKNOWN
+CALLUSED(11) = callarg(13)
+*callarg(13) = callescape(10)
+CALLCLOBBERED(12) = callarg(13)
+callescape(10) = callarg(13)
+ESCAPED = &STRING
+callarg(14) = &NONLOCAL
+callarg(14) = callarg(14) + UNKNOWN
+callarg(14) = *callarg(14) + UNKNOWN
+CALLUSED(11) = callarg(14)
+*callarg(14) = callescape(10)
+CALLCLOBBERED(12) = callarg(14)
+callescape(10) = callarg(14)
+ESCAPED = &NONLOCAL
+
+Collapsing static cycles and doing variable substitution
+Building predecessor graph
+Detecting pointer and location equivalences
+Rewriting constraints and unifying variables
+Uniting pointer but not location equivalent variables
+Finding indirect cycles
+Solving graph
+
+Points-to sets
+
+ANYTHING = { ANYTHING }
+ESCAPED = { STRING ESCAPED NONLOCAL }
+NONLOCAL = { ESCAPED NONLOCAL }
+STOREDANYTHING = { }
+INTEGER = { ANYTHING }
+func = { }
+printf = { }
+callescape(10) = { STRING ESCAPED NONLOCAL }
+CALLUSED(11) = { STRING ESCAPED NONLOCAL } same as callescape(10)
+CALLCLOBBERED(12) = { STRING ESCAPED NONLOCAL }
+callarg(13) = { STRING }
+callarg(14) = { ESCAPED NONLOCAL }
+main = { }
+
+
+Alias information for main
+
+Aliased symbols
+
+
+Call clobber information
+
+ESCAPED, points-to non-local, points-to vars: { }
+
+Flow-insensitive points-to information
+
+
+int main ()
+{
+  <bb 2> [local count: 1073741824]:
+  func (67);
+  func (5);
+  printf ("%d", 3);
+  return 0;
+
+}
+
+
