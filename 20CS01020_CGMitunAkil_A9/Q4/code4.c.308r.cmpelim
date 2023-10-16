@@ -107,58 +107,58 @@ Dataflow summary:
 (note 1 0 6 NOTE_INSN_DELETED)
 (note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (insn 2 6 3 2 (set (reg/v:SI 3 bx [orig:87 n ] [87])
-        (reg:SI 2 cx [91])) "code4.c":4:1 81 {*movsi_internal}
+        (reg:SI 2 cx [91])) "code4.c":5:1 81 {*movsi_internal}
      (expr_list:REG_EQUIV (mem/c:SI (reg/f:DI 16 argp) [1 n+0 S4 A64])
         (nil)))
 (note 3 2 4 2 NOTE_INSN_FUNCTION_BEG)
 (insn 4 3 8 2 (set (reg:SI 0 ax [orig:86 <retval> ] [86])
-        (reg/v:SI 3 bx [orig:87 n ] [87])) "code4.c":6:16 81 {*movsi_internal}
+        (reg/v:SI 3 bx [orig:87 n ] [87])) "code4.c":7:16 81 {*movsi_internal}
      (nil))
 (insn 8 4 9 2 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/v:SI 3 bx [orig:87 n ] [87])
-            (const_int 1 [0x1]))) "code4.c":5:7 11 {*cmpsi_1}
+            (const_int 1 [0x1]))) "code4.c":6:7 11 {*cmpsi_1}
      (nil))
 (jump_insn 9 8 10 2 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref:DI 27)
-            (pc))) "code4.c":5:7 891 {*jcc}
+            (pc))) "code4.c":6:7 891 {*jcc}
      (int_list:REG_BR_PROB 225163668 (nil))
  -> 27)
 (note 10 9 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
 (insn 11 10 12 3 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/v:SI 3 bx [orig:87 n ] [87])
-            (const_int 2 [0x2]))) "code4.c":7:12 11 {*cmpsi_1}
+            (const_int 2 [0x2]))) "code4.c":8:12 11 {*cmpsi_1}
      (nil))
 (jump_insn 12 11 13 3 (set (pc)
         (if_then_else (eq (reg:CCZ 17 flags)
                 (const_int 0 [0]))
             (label_ref:DI 27)
-            (pc))) "code4.c":7:12 891 {*jcc}
+            (pc))) "code4.c":8:12 891 {*jcc}
      (int_list:REG_BR_PROB 386869180 (nil))
  -> 27)
 (note 13 12 43 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 43 13 16 4 (set (reg:SI 2 cx [88])
         (plus:SI (reg/v:SI 3 bx [orig:87 n ] [87])
-            (const_int -1 [0xffffffffffffffff]))) "code4.c":10:16 225 {*leasi}
+            (const_int -1 [0xffffffffffffffff]))) "code4.c":11:16 225 {*leasi}
      (nil))
 (call_insn/u/c 16 43 17 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
-            (const_int 32 [0x20]))) "code4.c":10:16 909 {*call_value}
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":11:16 909 {*call_value}
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:SI (use (reg:SI 2 cx))
         (nil)))
 (insn 17 16 44 4 (set (reg:SI 4 si [orig:83 _2 ] [83])
-        (reg:SI 0 ax [92])) "code4.c":10:16 81 {*movsi_internal}
+        (reg:SI 0 ax [92])) "code4.c":11:16 81 {*movsi_internal}
      (nil))
 (insn 44 17 20 4 (set (reg:SI 2 cx [89])
         (plus:SI (reg/v:SI 3 bx [orig:87 n ] [87])
-            (const_int -2 [0xfffffffffffffffe]))) "code4.c":10:32 225 {*leasi}
+            (const_int -2 [0xfffffffffffffffe]))) "code4.c":11:32 225 {*leasi}
      (nil))
 (call_insn/u/c 20 44 21 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
-            (const_int 32 [0x20]))) "code4.c":10:32 909 {*call_value}
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":11:32 909 {*call_value}
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:SI (use (reg:SI 2 cx))
@@ -169,11 +169,11 @@ Dataflow summary:
                 (plus:SI (reg:SI 0 ax [93])
                     (reg:SI 4 si [orig:83 _2 ] [83])))
             (clobber (reg:CC 17 flags))
-        ]) "code4.c":10:30 229 {*addsi_1}
+        ]) "code4.c":11:30 229 {*addsi_1}
      (nil))
 (code_label 27 22 30 5 1 (nil) [2 uses])
 (note 30 27 29 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 29 30 42 5 (use (reg/i:SI 0 ax)) "code4.c":11:1 -1
+(insn 29 30 42 5 (use (reg/i:SI 0 ax)) "code4.c":12:1 -1
      (nil))
 (note 42 29 0 NOTE_INSN_DELETED)
 
@@ -201,48 +201,48 @@ Dataflow summary:
 (note 1 0 4 NOTE_INSN_DELETED)
 (note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
-(call_insn 3 2 6 2 (call (mem:QI (symbol_ref:DI ("__main") [flags 0x43]  <function_decl 0000000002c8e600 __main>) [0  S1 A8])
-        (const_int 32 [0x20])) "code4.c":14:1 898 {*call}
+(call_insn 3 2 6 2 (call (mem:QI (symbol_ref:DI ("__main") [flags 0x43]  <function_decl 0000000002cb1600 __main>) [0  S1 A8])
+        (const_int 32 [0x20])) "code4.c":15:1 898 {*call}
      (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
         (nil))
     (nil))
 (insn 6 3 7 2 (set (reg:SI 2 cx)
-        (const_int 67 [0x43])) "code4.c":18:9 81 {*movsi_internal}
+        (const_int 67 [0x43])) "code4.c":19:9 81 {*movsi_internal}
      (nil))
 (call_insn/u/c 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
-            (const_int 32 [0x20]))) "code4.c":18:9 909 {*call_value}
-     (expr_list:REG_EH_REGION (const_int 0 [0])
-        (nil))
-    (expr_list:SI (use (reg:SI 2 cx))
-        (nil)))
-(insn 8 7 9 2 (set (reg:SI 2 cx)
-        (const_int 5 [0x5])) "code4.c":19:9 81 {*movsi_internal}
-     (nil))
-(call_insn/u/c 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002c85d00 func>) [0 func S1 A8])
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
             (const_int 32 [0x20]))) "code4.c":19:9 909 {*call_value}
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:SI (use (reg:SI 2 cx))
         (nil)))
+(insn 8 7 9 2 (set (reg:SI 2 cx)
+        (const_int 5 [0x5])) "code4.c":20:9 81 {*movsi_internal}
+     (nil))
+(call_insn/u/c 9 8 10 2 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+            (const_int 32 [0x20]))) "code4.c":20:9 909 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 2 cx))
+        (nil)))
 (insn 10 9 11 2 (set (reg:SI 1 dx)
-        (const_int 3 [0x3])) "code4.c":21:5 81 {*movsi_internal}
+        (const_int 3 [0x3])) "code4.c":22:5 81 {*movsi_internal}
      (nil))
 (insn 11 10 13 2 (set (reg/f:DI 2 cx [83])
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c5aea0 *.LC0>)) "code4.c":21:5 80 {*movdi_internal}
-     (expr_list:REG_EQUIV (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c5aea0 *.LC0>)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c81ea0 *.LC0>)) "code4.c":22:5 80 {*movdi_internal}
+     (expr_list:REG_EQUIV (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c81ea0 *.LC0>)
         (nil)))
 (call_insn 13 11 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x43]  <function_decl 0000000002a57000 printf>) [0 __builtin_printf S1 A8])
-            (const_int 32 [0x20]))) "code4.c":21:5 909 {*call_value}
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x43]  <function_decl 0000000002a71000 printf>) [0 __builtin_printf S1 A8])
+            (const_int 32 [0x20]))) "code4.c":22:5 909 {*call_value}
      (nil)
     (expr_list:DI (use (reg:DI 2 cx))
         (expr_list:SI (use (reg:SI 1 dx))
             (nil))))
 (insn 18 13 19 2 (set (reg/i:SI 0 ax)
-        (const_int 0 [0])) "code4.c":22:1 81 {*movsi_internal}
+        (const_int 0 [0])) "code4.c":23:1 81 {*movsi_internal}
      (nil))
-(insn 19 18 21 2 (use (reg/i:SI 0 ax)) "code4.c":22:1 -1
+(insn 19 18 21 2 (use (reg/i:SI 0 ax)) "code4.c":23:1 -1
      (nil))
 (note 21 19 0 NOTE_INSN_DELETED)
