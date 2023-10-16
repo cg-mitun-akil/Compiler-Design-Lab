@@ -7,6 +7,6 @@ Input Domain Instructions:
 1. Whole numbers and + , - , / , *
 2. Whole numbers and + , - , / , * and identifiers ( single small alphabets )
 3. Whole numbers and + , - , / , * and identifiers ( single small alphabets )
-4. Optional question Fibonacci code with some trivial calculations
-Command: gcc -O -fdump-rtl-all -fdump-tree-gimple -S code4.c
+4. Optional qustion Fibonacci code with some trivial calculations
+Command: gcc -O -fdump-rtl-all -fdump-tree-all -S code4.c 
 

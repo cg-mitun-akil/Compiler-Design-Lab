@@ -189,7 +189,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 88)
         (nil)))
 (call_insn/u/c 16 15 40 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ba6d00 func>) [0 func S1 A8])
             (const_int 32 [0x20]))) "code4.c":11:16 909 {*call_value}
      (expr_list:REG_DEAD (reg:SI 2 cx)
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -218,7 +218,7 @@ Dataflow summary:
      (expr_list:REG_DEAD (reg:SI 89)
         (nil)))
 (call_insn/u/c 20 19 41 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ba6d00 func>) [0 func S1 A8])
             (const_int 32 [0x20]))) "code4.c":11:32 909 {*call_value}
      (expr_list:REG_DEAD (reg:SI 2 cx)
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -283,7 +283,7 @@ Dataflow summary:
 ;;    total ref usage 256{238d,18u,0e} in 11{7 regular + 4 call} insns.
 (note 4 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
 (note 2 4 3 2 NOTE_INSN_FUNCTION_BEG)
-(call_insn 3 2 6 2 (call (mem:QI (symbol_ref:DI ("__main") [flags 0x43]  <function_decl 0000000002cb1600 __main>) [0  S1 A8])
+(call_insn 3 2 6 2 (call (mem:QI (symbol_ref:DI ("__main") [flags 0x43]  <function_decl 0000000002baf600 __main>) [0  S1 A8])
         (const_int 32 [0x20])) "code4.c":15:1 898 {*call}
      (expr_list:REG_EH_REGION (const_int -2147483648 [0xffffffff80000000])
         (nil))
@@ -292,7 +292,7 @@ Dataflow summary:
         (const_int 67 [0x43])) "code4.c":19:9 81 {*movsi_internal}
      (nil))
 (call_insn/u/c 7 6 8 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ba6d00 func>) [0 func S1 A8])
             (const_int 32 [0x20]))) "code4.c":19:9 909 {*call_value}
      (expr_list:REG_DEAD (reg:SI 2 cx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -304,7 +304,7 @@ Dataflow summary:
         (const_int 5 [0x5])) "code4.c":20:9 81 {*movsi_internal}
      (nil))
 (call_insn/u/c 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ca8d00 func>) [0 func S1 A8])
+        (call (mem:QI (symbol_ref:DI ("func") [flags 0x3]  <function_decl 0000000002ba6d00 func>) [0 func S1 A8])
             (const_int 32 [0x20]))) "code4.c":20:9 909 {*call_value}
      (expr_list:REG_DEAD (reg:SI 2 cx)
         (expr_list:REG_UNUSED (reg:SI 0 ax)
@@ -316,15 +316,15 @@ Dataflow summary:
         (const_int 3 [0x3])) "code4.c":22:5 81 {*movsi_internal}
      (nil))
 (insn 11 10 12 2 (set (reg/f:DI 83)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c81ea0 *.LC0>)) "code4.c":22:5 80 {*movdi_internal}
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002b7dea0 *.LC0>)) "code4.c":22:5 80 {*movdi_internal}
      (nil))
 (insn 12 11 13 2 (set (reg:DI 2 cx)
         (reg/f:DI 83)) "code4.c":22:5 80 {*movdi_internal}
      (expr_list:REG_DEAD (reg/f:DI 83)
-        (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002c81ea0 *.LC0>)
+        (expr_list:REG_EQUAL (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0000000002b7dea0 *.LC0>)
             (nil))))
 (call_insn 13 12 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x43]  <function_decl 0000000002a71000 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x43]  <function_decl 000000000297f000 printf>) [0 __builtin_printf S1 A8])
             (const_int 32 [0x20]))) "code4.c":22:5 909 {*call_value}
      (expr_list:REG_DEAD (reg:DI 2 cx)
         (expr_list:REG_DEAD (reg:SI 1 dx)

@@ -1,0 +1,43 @@
+26 ssa "unused VAR_DECLs removed" "main" 1
+39 ccp "Statements deleted" "func" 2
+44 fre "RPO num lattice == 10" "func" 1
+44 fre "RPO blocks" "func" 6
+44 fre "RPO iterations == 10" "func" 1
+44 fre "RPO blocks visited" "func" 6
+44 fre "RPO num values == 10" "func" 1
+44 fre "RPO blocks executable" "func" 6
+44 fre "RPO block visited times == 1" "func" 6
+44 fre "RPO num avail == 6" "func" 1
+58 release_ssa "SSA names released" "func" 4
+58 release_ssa "SSA name holes removed" "func" 4
+39 ccp "Constants propagated" "main" 3
+39 ccp "Statements deleted" "main" 5
+44 fre "RPO blocks" "main" 1
+44 fre "RPO iterations == 10" "main" 1
+44 fre "RPO blocks visited" "main" 1
+44 fre "RPO num avail == 2" "main" 1
+44 fre "RPO blocks executable" "main" 1
+44 fre "RPO block visited times == 1" "main" 1
+44 fre "RPO num values == 3" "main" 1
+44 fre "RPO num lattice == 3" "main" 1
+58 release_ssa "unused VAR_DECLs removed" "main" 1
+58 release_ssa "SSA names released" "main" 9
+58 release_ssa "SSA name holes removed" "main" 9
+117 fre "RPO blocks" "func" 4
+117 fre "RPO iterations == 10" "func" 1
+117 fre "RPO num values == 8" "func" 1
+117 fre "RPO blocks visited" "func" 4
+117 fre "RPO blocks executable" "func" 4
+117 fre "RPO block visited times == 1" "func" 4
+117 fre "RPO num avail == 6" "func" 1
+117 fre "RPO num lattice == 8" "func" 1
+122 dce "PHI nodes deleted" "func" 1
+290 combine "two-insn combine" "func" 1
+117 fre "RPO num values == 1" "main" 1
+117 fre "RPO blocks" "main" 1
+117 fre "RPO iterations == 10" "main" 1
+117 fre "RPO blocks visited" "main" 1
+117 fre "RPO blocks executable" "main" 1
+117 fre "RPO block visited times == 1" "main" 1
+117 fre "RPO num avail == 0" "main" 1
+117 fre "RPO num lattice == 1" "main" 1
