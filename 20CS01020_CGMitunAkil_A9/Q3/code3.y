@@ -12,6 +12,7 @@
   char addToTable(char op1, char operation, char op2);
   int currentIndex = 0;
   int flag=0;
+  
 %}
 
 %union {

@@ -1,6 +1,7 @@
 %{ 
 /* Definition section */
   #include "code1.tab.h"
+  
 %}
 
 
