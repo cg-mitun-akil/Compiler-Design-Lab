@@ -1,0 +1,9 @@
+global 
+	f := 1;
+	i := 2;
+	x := 5;
+	while i <= x:
+		f := f * i;
+		i := i + 1
+	end
+end

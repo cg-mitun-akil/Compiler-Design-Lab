@@ -1,0 +1,39 @@
+global 
+
+	y := 8;
+	x := y + 1;
+	
+	print x;
+	read y;
+	
+	if p <> q and a = 5:
+		print a;
+		if a < b:
+			b := a + b;
+			while m < n:
+				n:= a * 2
+			end;
+			v := 2 * 3
+		else
+			read f
+		end;
+		print q
+	else
+		print a;
+		print b
+	end;
+	a := 5;
+	while y > x:
+		q := c + 1;
+		while q > c:
+			x := y + 1;
+			while a >= b:
+				a:= x + y;
+				if 1 < 2:
+					b := a * c
+				end
+			end
+		end
+	end	
+	
+end
